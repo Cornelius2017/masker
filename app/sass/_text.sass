@@ -1,0 +1,78 @@
+/* BEGIN heading */
+.heading
+	line-height: 1
+	text-align: center
+	&--1
+		@extend .heading
+		+font(72, 27, 600, $PNb)
+		@media only screen and (max-width: $xs)
+			font-size: 3rem	
+	&--2
+		@extend .heading
+		+font(90, 80, 400)
+	&--3
+		@extend .heading
+		+font(42, 28, 600, $PNb)
+		color: $main
+		text-transform: uppercase
+	&--4
+		@extend .heading
+		+font(26.77, 26.77, 400)
+	&--5
+		@extend .heading
+		+font(90, 80, 400)
+	&--6
+		@extend .heading
+		+font(90, 80, 400)
+/* END heading */
+
+/* BEGIN text */
+.text
+	&--center
+		text-align: center
+		justify-content: center
+	&--left
+		text-align: left
+		justify-content: flex-start 
+	&--right
+		text-align: right
+		justify-content: flex-end
+	&--copy
+		margin-right: auto
+	&--lang
+		font-weight: 600
+		@extend .row--6
+		&::after
+			content: "\f0d7"
+			font-family: $FA
+			color: $main
+			margin-left: 5px
+	&--subheading
+		+font(14, 26, 300)
+		color: $textGrey2
+	&--1
+		+font(15.61, 29, 300)
+		font-size: 15px
+		color: $textGrey2
+		@extend .row--13
+		&:last-child
+			margin-bottom: 0
+/* END text */
+
+/* BEGIN link */
+.link
+	@extend .inb
+	border-bottom: 1px dotted transparent
+	&:hover
+		border-bottom-color: inherit
+
+/* END link */
+
+/* BEGIN decore */
+.decore__line
+	max-width: rem(78)
+	height: 2px
+	background-color: $black
+	border: none
+	margin: rem(25) auto
+/* END decore */

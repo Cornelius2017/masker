@@ -1,0 +1,17 @@
+
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+
+$FA: 'FontAwesome'
+
+
+$ff: 'ProximaNova-Bold', 'ProximaNova-Regular', 'ProximaNova-Light', 'ProximaNova-Black', 'Proxima Nova Condensed'
+
+@for $i from 1 through length($ff)
+	@font-face
+		$family: nth($ff, $i)
+		font-family: $family
+		src: url('../fonts/'+$family+'.eot')
+		src: local('../fonts/'+$family), url('../fonts/'+$family+'.ttf') format('truetype'), url('../fonts/'+$family+'.woff') format('woff'), url('../fonts/'+$family+'.woff2') format('woff2')
+		font-weight: normal
+		font-style: normal
+

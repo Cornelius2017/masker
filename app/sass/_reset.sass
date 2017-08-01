@@ -1,0 +1,107 @@
+@import "_colors_&_vars"
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  appearance: none
+  outline: none
+  &::selection
+    background-color: $greyLight
+
+body
+  overflow: hidden
+  overflow-y: scroll
+  &::-webkit-scrollbar
+    width: 3px
+    height: 3px
+  &::-webkit-scrollbar-track 
+    background-color: $black
+  &::-webkit-scrollbar-thumb 
+    background-color: $main
+
+img
+  display: inline-block
+  vertical-align: middle
+  max-width: 100%
+  margin: 0 auto
+  object-fit: contain
+  user-select: none
+  cursor: pointer
+
+a
+  color: inherit
+  text-decoration: none
+
+li
+  list-style-type: none
+
+input
+  &:focus
+    &::-moz-placeholder
+      color: transparent
+    &:-moz-placeholder
+      color: transparent
+    &:-ms-input-placeholder
+      color: transparent
+    &::-webkit-input-placeholder
+      color: transparent
+  &::-moz-placeholder
+    color: $textGrey5
+    opacity: 1
+  &:-moz-placeholder
+    color: $textGrey5
+  &:-ms-input-placeholder
+    color: $textGrey5
+  &::-webkit-input-placeholder
+    color: $textGrey5
+
+.clearfix
+  &::after
+    content: " "
+    clear: both
+    display: table
+
+.flex
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  flex-flow: row wrap
+  &--center
+    @extend .flex
+    justify-content: center
+    align-items: center
+
+.fixed
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 100500
+
+.abs
+  position: absolute
+  display: block
+  width: 100%
+  height: 100%
+  z-index: -1
+  top: 0
+  left: 0
+  &--center
+    @extend .abs
+    right: 0
+    bottom: 0
+    margin: auto
+
+.bgi
+  background-position: 50%
+  background-size: cover
+  background-repeat: no-repeat
+
+.inb
+  display: inline-block
+  vertical-align: middle
+  cursor: pointer
+  user-select: none

@@ -1,0 +1,81 @@
+//Colors
+$black: #000
+$white: #fff
+
+$yellow: #bea67c
+$orange: #f68e56
+
+$blueDark: #1c2450
+$red: #d52b37
+
+$grey: #333
+$greyLight: #f7f7f7 
+$greyLight2: #e8e8e8
+$greyLight3: #f5f5f5
+$greyLight4: #b8b8b8
+
+$textGrey: #1f2752
+$textGrey2: #585858
+$textGrey3: #1c2450
+$textGrey4: #1b1d38
+$textGrey5: #9b9b9b
+$textGrey6: #fefefe
+
+$main: $yellow
+$teme: $blueDark
+$dark: $black
+
+
+@function rem($px)
+	@return ($px/$fz) + rem
+
+@function em($px)
+	@return ($px/$fz) + em
+
+=theme($theme)
+	@if $theme == $teme or $main or $white
+		@if $theme == $teme
+			background-color: $teme
+			color: $white 
+			fill: $white
+		@if $theme == $main
+			color: $teme
+		@if $theme == $dark
+			color: $white
+			background-color: $dark
+	@else 
+		color: inherit
+
+
+$PNb: 'ProximaNova-Bold'
+$PNbk: 'ProximaNova-Black'
+$PNr: 'ProximaNova-Regular'
+$PNl: 'ProximaNova-Light'
+$PNc: 'Proxima Nova Condensed'
+
+$fz: 16
+\:root
+	font-size: $fz + px
+
+=font($font-size, $line-height, $font-weight: 300, $font-family: $PNr)
+	font-family: $font-family, -apple-system, BlinkMacSystemFont, "Roboto", "Roboto Condensed", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+	font-size: $font-size/$fz + rem
+	line-height: $line-height/$font-size
+	font-weight: $font-weight
+
+html
+	text-size-adjust: 100%
+	text-rendering: optimizeLegibility
+	text-overflow: ellipsis
+	font-variant: normal
+	font-family: sans-serif
+	font-size: 16px
+
+
+body
+	font-family: sans-serif
+	font-smoothing: antialiased
+	+font($fz, 24, 300, $PNr)
+
+
+
